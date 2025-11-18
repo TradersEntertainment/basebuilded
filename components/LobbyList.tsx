@@ -1,12 +1,3 @@
-Bu linke git:
-
-https://github.com/TradersEntertainment/basebuilded/blob/main/components/LobbyList.tsx
-Sağ üstte kalem (✏️) ikonuna tıkla
-
-CTRL+A (hepsini seç) → DELETE (hepsini sil)
-
-Aşağıdaki kodu TAMAMEN kopyala ve yapıştır:
-
 "use client";
 
 import { useActiveGames, useGameState } from "@/hooks/useGameState";

@@ -1,3 +1,12 @@
+Bu linke git:
+
+https://github.com/TradersEntertainment/basebuilded/blob/main/components/LobbyList.tsx
+Sağ üstte kalem (✏️) ikonuna tıkla
+
+CTRL+A (hepsini seç) → DELETE (hepsini sil)
+
+Aşağıdaki kodu TAMAMEN kopyala ve yapıştır:
+
 "use client";
 
 import { useActiveGames, useGameState } from "@/hooks/useGameState";
@@ -85,8 +94,6 @@ export default function LobbyList() {
         <p className="text-gray-400 mt-4">Loading games...</p>
       </div>
     );
-  }
-
   }
 
   const gameIdsArray = Array.isArray(gameIds) ? gameIds : [];

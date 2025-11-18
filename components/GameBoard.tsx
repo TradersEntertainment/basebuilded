@@ -24,14 +24,15 @@ export default function GameBoard({
   const { moves } = useGameMoves(gameId);
   const [revealedTiles, setRevealedTiles] = useState<Map<string, { revealed: boolean; hitMine: boolean }>>(new Map());
 
-  useEffect(() => {
-    const newRevealed = new Map<string, { revealed: boolean; hitMine: boolean }>();
-    moves.forEach((move: any) => {
-      const key = `${move.x}-${move.y}`;
-      newRevealed.set(key, { revealed: true, hitMine: move.hitMine });
-    });
-    setRevealedTiles(newRevealed);
-  }, [moves]);
+  uuseEffect(() => {
+  const newRevealed = new Map<string, { revealed: boolean; hitMine: boolean }>();
+  const movesArray = Array.isArray(moves) ? moves : [];
+  movesArray.forEach((move: any) => {
+    const key = `${move.x}-${move.y}`;
+    newRevealed.set(key, { revealed: true, hitMine: move.hitMine });
+  });
+  setRevealedTiles(newRevealed);
+}, [moves]);
 
   const isMyTurn = currentPlayer?.toLowerCase() === myAddress?.toLowerCase();
 

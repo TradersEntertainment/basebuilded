@@ -24,7 +24,7 @@ export default function GameBoard({
   const { moves } = useGameMoves(gameId);
   const [revealedTiles, setRevealedTiles] = useState<Map<string, { revealed: boolean; hitMine: boolean }>>(new Map());
 
-  uuseEffect(() => {
+  useEffect(() => {
   const newRevealed = new Map<string, { revealed: boolean; hitMine: boolean }>();
   const movesArray = Array.isArray(moves) ? moves : [];
   movesArray.forEach((move: any) => {
